@@ -14,6 +14,4 @@ jobs:
       - uses: ros-tooling/setup-ros@0.0.20
         with:
           required-ros-distributions: melodic
-      - run: "source /opt/ros/melodic/setup.bash"
-      - run: "export ROS_PYTHON_VERSION=3"
-      - run: "mkdir -p ~/raceon_sim_ws/src && cd ~/raceon_sim_ws && catkin_make"
+      - run: "source /opt/ros/melodic/setup.bash && export ROS_PYTHON_VERSION=3 && mkdir -p ~/raceon_sim_ws/src && cd ~/raceon_sim_ws && catkin_make"
