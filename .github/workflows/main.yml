@@ -13,6 +13,7 @@ jobs:
     steps:
       - uses: ros-tooling/setup-ros@0.0.20
         with:
-          required-ros-distributions: melodic #dashing
-#      - run: "source /opt/ros/dashing/setup.bash && ros2 run --help"
-      - run: "source /opt/ros/melodic/setup.bash && rosnode --help"
+          required-ros-distributions: melodic
+      - run: "source /opt/ros/melodic/setup.bash"
+      - run: "export ROS_PYTHON_VERSION=3"
+      - run: "mkdir -p ~/raceon_sim_ws/src && cd ~/raceon_sim_ws && catkin_make"
