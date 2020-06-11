@@ -16,3 +16,4 @@ jobs:
           required-ros-distributions: melodic
       - run: "source /opt/ros/melodic/setup.bash && export ROS_PYTHON_VERSION=3 && mkdir -p ~/raceon_sim_ws/src && cd ~/raceon_sim_ws && catkin_make"
       - run: "source ~/raceon_sim_ws/devel/setup.bash && sudo apt-get install ros-melodic-ros-control ros-melodic-gazebo-ros-control ros-melodic-ros-controllers python3-opencv ros-melodic-ackermann-msgs python3-empy && pip3 install pynput"
+      - run: "cd ~/raceon_sim_ws/src && git clone https://github.com/wjwwood/serial.git && git clone https://github.com/ros-drivers/ackermann_msgs.git && git clone https://github.com/mit-racecar/racecar.git && git clone https://github.com/mit-racecar/vesc.git && git clone https://github.com/d4n1elchen/raceon.git && git clone https://github.com/d4n1elchen/raceon_simulation.git && git clone https://github.com/d4n1elchen/raceon_visualizer.git && git clone https://github.com/d4n1elchen/racecar_gazebo.git"
