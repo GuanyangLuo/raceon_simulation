@@ -21,6 +21,7 @@ echo "export ROS_PYTHON_VERSION=3" >> ~/.bashrc
 ```shell
 mkdir -p ~/raceon_sim_ws/src
 cd ~/raceon_sim_ws
+pip3 install catkin-pkg
 catkin_make
 ```
 
