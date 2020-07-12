@@ -50,5 +50,5 @@ RUN source /opt/ros/melodic/setup.bash && \
     cd ~/raceon_sim_ws && \
     pip3 install rospkg && \
     catkin_make
-WORKDIR /root/raceon_sim_ws
-CMD ["/bin/bash"]
+# WORKDIR /root/raceon_sim_ws
+# CMD ["/bin/bash"]
