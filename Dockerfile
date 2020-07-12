@@ -16,12 +16,12 @@ RUN apt-get update && \
     apt-get install -y python3-pip
 RUN source /opt/ros/melodic/setup.bash && \
     export ROS_PYTHON_VERSION=3 && \
-    mkdir -p ~/raceon_sim_ws/src && \
-    cd ~/raceon_sim_ws && \
+    mkdir -p /home/raceon_sim_ws/src && \
+    cd /home/raceon_sim_ws && \
     pip3 install catkin-pkg && \
     catkin_make
 RUN source /opt/ros/melodic/setup.bash && \
-    source ~/raceon_sim_ws/devel/setup.bash && \
+    source /home/raceon_sim_ws/devel/setup.bash && \
     export ROS_PYTHON_VERSION=3 && \
     apt-get update && \
     apt-get install -y \
@@ -33,9 +33,9 @@ RUN source /opt/ros/melodic/setup.bash && \
     python3-empy && \
     pip3 install pynput
 RUN source /opt/ros/melodic/setup.bash && \
-    source ~/raceon_sim_ws/devel/setup.bash && \
+    source /home/raceon_sim_ws/devel/setup.bash && \
     export ROS_PYTHON_VERSION=3 && \
-    cd ~/raceon_sim_ws/src && \
+    cd /home/raceon_sim_ws/src && \
     git clone https://github.com/wjwwood/serial.git && \
     git clone https://github.com/ros-drivers/ackermann_msgs.git && \
     git clone https://github.com/mit-racecar/racecar.git && \
@@ -45,9 +45,9 @@ RUN source /opt/ros/melodic/setup.bash && \
     git clone https://github.com/d4n1elchen/raceon_visualizer.git && \
     git clone https://github.com/d4n1elchen/racecar_gazebo.git
 RUN source /opt/ros/melodic/setup.bash && \
-    source ~/raceon_sim_ws/devel/setup.bash && \
+    source /home/raceon_sim_ws/devel/setup.bash && \
     export ROS_PYTHON_VERSION=3 && \
-    cd ~/raceon_sim_ws && \
+    cd /home/raceon_sim_ws && \
     pip3 install rospkg && \
     catkin_make
 # WORKDIR /root/raceon_sim_ws
